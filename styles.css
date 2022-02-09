@@ -74,4 +74,12 @@ body {
     width: 100%;
     max-width: 100%;
     object-fit: cover;
+    object-position: center;
+}
+
+.header-overlay {
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    background: rgba(44, 43, 43, 0.6);
 }

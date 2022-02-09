@@ -1,3 +1,10 @@
+
+var myVideo = document.getElementById("header")
+myVideo.addEventListener("ended", function() {
+    myVideo.autoplay = false;
+    myVideo.load();
+})
+
 $(function() {
     $("#navbar-toggler-icon").click(function () {
         $("#navbarSupportedContent").slideToggle();
