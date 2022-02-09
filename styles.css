@@ -27,6 +27,7 @@ body {
     display: flex;
     align-items: center;
     font-size: 22px;
+    text-transform: uppercase;
 }
 
 #navbar-brand {
