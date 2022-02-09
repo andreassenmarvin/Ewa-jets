@@ -83,3 +83,184 @@ body {
     height: 100vh;
     background: rgba(44, 43, 43, 0.6);
 }
+
+.header-tag1 {
+    position: absolute;
+    margin: 0 0 0 40px;
+    top: 20%;
+    color: white;
+    letter-spacing: 0.2em;
+    z-index: 3;
+}
+
+#header-tag1-title {
+    font-size: 30px;
+}
+
+.header-tag-title {
+    display: none;
+}
+
+#header-tag1-title-underline {
+    width: 400px;
+    height: 2px;
+    background-color: white;
+}
+
+#header-tag1-paragraph {
+    width: 400px;
+    font-size: 70px;
+    font-weight: lighter;
+}
+
+.explore-button {
+    position: absolute;
+    display: none;
+    width: 200px;
+    top: 80%;
+    margin: 0 0 0 40px;
+    z-index: 3;
+    padding: 20px 40px;
+    border-radius: 3px;
+    overflow: hidden;
+    color: white;
+    font-size: 18px;
+    letter-spacing: 0.2em;
+    text-align: center;
+    text-transform: uppercase;
+    text-decoration: none;
+    -webkit-box-shadow: 2px 20px 50px rgba(0, 0, 0, 0.5);
+    box-shadow: 2px 20px 50px rgba(0, 0, 0, 0.5);
+    -webkit-transform: translate(0%, 0%);
+    transform: translate(0%, 0%);
+}
+
+a::before,
+a::after {
+    content: '';
+    background: none;
+    position: absolute;
+    z-index: -1;
+}
+
+a:hover {
+    cursor: pointer;
+    color: white;
+    text-decoration: none;
+}
+
+.explore-button::after {
+    width: 0;
+    height: 100%;
+    left: -35%;
+    top: 0;
+    background-color: #d92626;
+    transform: skew(50deg);
+    transform-origin: bottom right;
+    transition: linear .4s;
+}
+
+.explore-button:hover::after {
+    width: 410px;
+    height: 100%;
+}
+
+.explore-button span {
+    position: absolute;
+}
+
+.explore-button span:nth-child(1) {
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 2px;
+    background: (linear, right top, left top, from(rgba(43, 8, 8, 0)), to(rgb(190, 130, 18)));
+    background: linear-gradient(to left, rgba(43, 8, 8, 0), rgb(190, 130, 18));
+    -webkit-animation: 2s animateTop linear infinite;
+    animation: 2s animateTop linear infinite;
+}
+
+@keyframes animateTop {
+    0% {
+        -webkit-transform: translateX(100%);
+        transform: translateX(100%);
+    }
+
+    100% {
+        -webkit-transform: translateX(-100%);
+        transform: translateX(-100%);
+    }
+}
+
+.explore-button span:nth-child(2) {
+    top: 0px;
+    right: 0px;
+    height: 100%;
+    width: 3px;
+    background: (linear, left bottom, left top, from(rgba(43, 8, 8, 0)), to(rgb(190, 130, 18)));
+    background: linear-gradient(to top, rgba(43, 8, 8, 0), #d92626);
+    -webkit-animation: 2s animateRight linear -1s infinite;
+    animation: 2s animateRight linear -1s infinite;
+}
+
+@keyframes animateRight {
+    0% {
+        -webkit-transform: translateY(100%);
+        transform: translateY(100%);
+    }
+
+    100% {
+        -webkit-transform: translateY(-100%);
+        transform: translateY(-100%);
+    }
+}
+
+.explore-button span:nth-child(3) {
+    bottom: 0px;
+    left: 0px;
+    width: 100%;
+    height: 2px;
+    background: (linear, left top, right top, from(rgba(43, 8, 8, 0)), to(#d92626));
+    background: linear-gradient(to right, rgba(43, 8, 8, 0), #d92626);
+    -webkit-animation: 2s animateBottom linear infinite;
+    animation: 2s animateBottom linear infinite;
+}
+
+@keyframes animateBottom {
+    0% {
+        -webkit-transform: translateX(-100%);
+        transform: translateX(-100%);
+    }
+
+    100% {
+        -webkit-transform: translateX(100%);
+        transform: translateX(100%);
+    }
+}
+
+.explore-button span:nth-child(4) {
+    top: 0px;
+    left: 0px;
+    height: 100%;
+    width: 3px;
+    background: (linear, left top, left bottom, from(rgba(43, 8, 8, 0)), to(#d92626));
+    background: linear-gradient(to bottom, rgba(43, 8, 8, 0), rgb(190, 130, 18));
+    -webkit-animation: 2s animateLeft linear -1s infinite;
+    animation: 2s animateLeft linear -1s infinite;
+}
+
+@keyframes animateLeft {
+    0% {
+        -webkit-transform: translateY(-100%);
+        transform: translateY(-100%);
+    }
+
+    100% {
+        -webkit-transform: translateY(100%);
+        transform: translateY(100%);
+    }
+}
+
+.span-hover {
+    display: none;
+}

@@ -18,15 +18,31 @@
     <title>Ewa Jets</title>
 </head>
 
-<body>
+<body onload="typing()">
     <div class="header-overlay"></div>
 
-    <header>
+    <header style="display: flex; flex-direction: column;">
         <video autoplay muted class="header" id="header" poster="Assets/header.jpeg">
             <source src="Assets/header.mp4" type="video/mp4">
             <source src="Assets/header.ogg" type="video/ogg">
             <source src="Assets/header.webm" type="video/webm">
         </video>
+
+        <div class="header-tag1">
+            <h2 class="header-tag-title" id="header-tag1-title">Global Reach With Unmatched Experience</h2>
+            <div class="header-tag-title" id="header-tag1-title-underline"></div>
+            <p id="header-tag1-paragraph"></p>
+        </div>
+
+        <a href="#" class="explore-button" onmouseover="spanRemove()" onmouseleave="spanAppend()">
+            <div class="span">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            Explore
+        </a>
     </header>
 
     <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light" id="navbar">
@@ -48,9 +64,9 @@
                     <a class="nav-link" href="about.html">About us</a>
                 </li>
                 <li class="nav-item dropdown privateDropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="privateDropdown" data-toggle="dropdown"
+                    <a class="nav-link dropdown-toggle" href="#" id="privateDropdown" role="button" data-toggle="dropdown"
                         aria-haspopup="true" aria-expanded="false">
-                   Private Jet Charter
+                        Private Jet Charter
                     </a>
                     <div class="dropdown-menu" id="dropdown1" aria-labelledby="navbarDropdown">
                         <a class="dropdown-item" href="air-ambulance.html">Air Ambulance</a>
@@ -77,8 +93,7 @@
         </div>
         <form class="form form-inline my-2 my-lg-0">
             <div class="form-group">
-                <input class="form-control form-control-sm mr-sm-2" id="search-input" type="search"
-                    aria-label="Search">
+                <input class="form-control form-control-sm mr-sm-2" id="search-input" type="search" aria-label="Search">
                 <button class="btn btn-outline-success btn-sm" type="submit" id="search-btn">Search</button>
             </div>
         </form>
