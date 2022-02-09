@@ -54,6 +54,11 @@ body {
     padding: 10px;
 }
 
+.dropdown-item:hover {
+    background-color: #4a89dc;
+    color: white;
+}
+
 .no-border {
     border: none;
 }
