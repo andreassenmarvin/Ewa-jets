@@ -94,6 +94,7 @@ $(function () {
 
         var name = document.getElementById("name");
         var message = document.getElementById("message");
+        let success = document.getElementById("form-success");
 
         if ((name.value == null || name.value == "") && (message.value == null || message.value == "")) {
             name.style.borderBottom = "1px solid red";
@@ -105,12 +106,14 @@ $(function () {
         }
 
         else if (message.value == null || message.value == "") {
-            message.style.borderBottom = "1px solid red"
+            message.style.borderBottom = "1px solid red";
         }
 
         else {
             name.style.borderBottom = "#757575";
-            message.style.borderBottom = "#757575"
+            message.style.borderBottom = "#757575";
+            success.style.display = "block";
+            $(feedbackForm).trigger("reset");
         }
     })
 })
